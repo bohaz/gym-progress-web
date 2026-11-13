@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Progress · Gimnasio y boxeo en Punta de Tralca, El Quisco</title>
+  <meta name="description" content="Gimnasio en Punta de Tralca, El Quisco: sala de máquinas, peso libre, cardio y spinning, y clases grupales de boxeo con FH Boxing Team. Isidoro Dubournais 2611.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://gym-progress-web.vercel.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="Gym Progress · Punta de Tralca, El Quisco">
+  <meta property="og:description" content="Máquinas, peso libre, cardio y boxeo en un solo lugar.">
+  <meta property="og:image" content="https://gym-progress-web.vercel.app/assets/img/og.jpg">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto+Slab:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "Gym Progress",
+    "image": "https://gym-progress-web.vercel.app/assets/img/og.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Isidoro Dubournais 2611",
+      "addressLocality": "El Quisco",
+      "addressRegion": "Valparaíso",
+      "addressCountry": "CL"
+    },
+    "sameAs": ["https://www.instagram.com/gym_progressssss/"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Logo reutilizable (se dibuja con las fuentes de la página) -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true">
+    <symbol id="logo-gp" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" fill="#0b0b0b"/>
+      <g fill="#e9e9e9">
+        <circle cx="137" cy="30" r="3"/><circle cx="163" cy="50" r="3"/><circle cx="177" cy="78" r="3"/>
+        <circle cx="179" cy="108" r="3"/><circle cx="169" cy="137" r="3"/><circle cx="148" cy="160" r="3"/>
+        <circle cx="120" cy="175" r="3"/><circle cx="90" cy="176" r="3"/><circle cx="61" cy="166" r="3"/>
+        <circle cx="38" cy="146" r="3"/><circle cx="24" cy="118" r="3"/><circle cx="22" cy="88" r="3"/>
+        <circle cx="32" cy="60" r="3"/><circle cx="51" cy="38" r="3"/><circle cx="73" cy="26" r="3"/>
+      </g>
+      <path fill="#d20a1c" d="M100 18l4.7 10.4 11.3 1.1-8.5 7.5 2.5 11.1-10-5.8-10 5.8 2.5-11.1-8.5-7.5 11.3-1.1z"/>
+      <g fill="#d20a1c"><circle cx="72" cy="50" r="2.4"/><circle cx="84" cy="46" r="2.4"/><circle cx="116" cy="46" r="2.4"/><circle cx="128" cy="50" r="2.4"/></g>
+      <text x="100" y="115" text-anchor="middle" font-family="'Roboto Slab', Rockwell, Georgia, serif" font-weight="900" font-size="58" fill="#d20a1c" letter-spacing="1">GYM</text>
+      <text x="100" y="140" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="19" letter-spacing="3" fill="#d7d7d7">PR<tspan fill="#d20a1c">O</tspan>GRESS</text>
+      <path d="M66 152q34 18 68 0" fill="none" stroke="#d20a1c" stroke-width="3.5" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== Encabezado ===== -->
+  <header class="nav-wrap">
+    <nav class="nav container" aria-label="Principal">
+      <a href="#inicio" class="brand" aria-label="Gym Progress, ir al inicio">
+        <svg class="brand__badge" aria-hidden="true"><use href="#logo-gp"/></svg>
+        <span class="brand__name">GYM <b>PROGRESS</b></span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
+      <label for="menu-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
+
+      <ul class="nav__links">
+        <li><a href="#inicio" aria-current="page">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#zonas">Zonas</a></li>
+        <li><a href="#boxeo">Boxeo</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a class="btn btn--sm nav__cta" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Escríbenos</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero container" id="inicio">
+      <div class="hero__top">
+        <h1 class="hero__title">Tu progreso se entrena en <span>Punta de Tralca</span></h1>
+        <p class="hero__note">
+          <span class="hero__bolt" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          </span>
+          Máquinas, cardio y boxeo<br>en un mismo lugar
+        </p>
+      </div>
+
+      <div class="hero__card">
+        <img class="hero__img"
+             src="https://images.unsplash.com/photo-1707538320664-1fca7c3c7770?auto=format&fit=crop&w=1600&q=75"
+             onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
+             alt="Hombre descansando entre series en un banco de gimnasio" width="1600" height="900" fetchpriority="high">
+        <div class="hero__cta notch notch--bl">
+          <a class="btn" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">
+            Quiero entrenar <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <div class="hero__chip">
+          <img src="assets/img/boxeo-sparring.jpg" alt="" width="56" height="56" loading="lazy">
+          <p><b>Boxeo grupal</b> con FH Boxing Team, lunes, miércoles y viernes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Por qué elegirnos ===== -->
+    <section class="why container" id="nosotros" aria-labelledby="why-title">
+      <div class="why__head">
+        <h2 id="why-title" class="h2">Por qué entrenar<br>en Gym Progress</h2>
+        <ul class="stats">
+          <li><strong>4</strong><span>zonas de<br>entrenamiento</span></li>
+          <li><strong>3</strong><span>días de boxeo<br>a la semana</span></li>
+          <li><strong>2</strong><span>niveles de<br>boxeo</span></li>
+        </ul>
+      </div>
+
+      <div class="why__cards">
+        <a class="tile" href="#zonas">
+          <img src="https://images.unsplash.com/photo-1646656130630-07af3a262a9b?auto=format&fit=crop&w=800&q=70"
+               onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
+               alt="Fila de máquinas de musculación" loading="lazy" width="800" height="900">
+          <span class="tile__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          <span class="tile__label">Sala de<br>máquinas</span>
+        </a>
+        <a class="tile" href="#boxeo">
+          <img src="https://images.unsplash.com/photo-1671856129092-ef4f4c412186?auto=format&fit=crop&w=800&q=70"
+               onerror="this.onerror=null;this.src='assets/img/boxeo-sparring.jpg'"
+               alt="Mujer con guantes de boxeo rojos" loading="lazy" width="800" height="900">
+          <span class="tile__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          <span class="tile__label">Clases de<br>boxeo</span>
+        </a>
+        <a class="tile" href="#zonas">
+          <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=800&q=70"
+               onerror="this.onerror=null;this.src='assets/img/sala-bicis-mural.jpg'"
+               alt="Bicicletas de spinning negras y rojas" loading="lazy" width="800" height="900">
+          <span class="tile__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          <span class="tile__label">Cardio y<br>spinning</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Zonas (pestañas en CSS) ===== -->
+    <section class="zones container" id="zonas" aria-labelledby="zones-title">
+      <div class="zones__head">
+        <h2 id="zones-title" class="h2">Un galpón amplio,<br>luminoso y equipado</h2>
+        <ul class="zones__facts">
+          <li><span class="ico" aria-hidden="true">☀</span>Techo alto y luz natural</li>
+          <li><span class="ico" aria-hidden="true">▦</span>Piso de pasto sintético</li>
+          <li><span class="ico" aria-hidden="true">✚</span>Baños y lavamanos</li>
+        </ul>
+      </div>
+
+      <div class="tabs">
+        <input type="radio" name="zona" id="z1" checked>
+        <input type="radio" name="zona" id="z2">
+        <input type="radio" name="zona" id="z3">
+        <input type="radio" name="zona" id="z4">
+
+        <div class="tabs__bar" role="presentation">
+          <label for="z1">Sala de máquinas</label>
+          <label for="z2">Peso libre</label>
+          <label for="z3">Cardio y spinning</label>
+          <label for="z4">Boxeo</label>
+        </div>
+
+        <div class="tabs__panels">
+          <figure class="panel" id="p1">
+            <img src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?auto=format&fit=crop&w=1400&q=70"
+                 onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
+                 alt="Sala de musculación con luz roja" loading="lazy" width="1400" height="600">
+            <figcaption>Poleas, prensa, máquinas guiadas y estaciones multifunción para trabajar cada grupo muscular.</figcaption>
+          </figure>
+          <figure class="panel" id="p2">
+            <img src="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?auto=format&fit=crop&w=1400&q=70"
+                 onerror="this.onerror=null;this.src='assets/img/sala-mancuernas.jpg'"
+                 alt="Mancuerna roja y plateada sobre superficie negra" loading="lazy" width="1400" height="600">
+            <figcaption>Racks de mancuernas, barras, discos y jaula para tus básicos: sentadilla, peso muerto y press.</figcaption>
+          </figure>
+          <figure class="panel" id="p3">
+            <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=1400&q=70"
+                 onerror="this.onerror=null;this.src='assets/img/sala-bicis-mural.jpg'"
+                 alt="Bicicletas de spinning en fila" loading="lazy" width="1400" height="600">
+            <figcaption>Bicicletas de spinning, trotadora curva, remo y cuerdas para subir pulsaciones.</figcaption>
+          </figure>
+          <figure class="panel" id="p4">
+            <img src="https://images.unsplash.com/photo-1716307035615-1c6465a32ef2?auto=format&fit=crop&w=1400&q=70"
+                 onerror="this.onerror=null;this.src='assets/img/boxeo-sparring.jpg'"
+                 alt="Fila de sacos de boxeo colgados" loading="lazy" width="1400" height="600">
+            <figcaption>Sacos, guantes y espacio para técnica, manoplas y sparring con FH Boxing Team.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Boxeo (en lugar del carrusel de entrenadores) ===== -->
+    <section class="boxing container" id="boxeo" aria-labelledby="boxing-title">
+      <div class="boxing__box">
+        <h2 id="boxing-title" class="h2 center">Clases grupales de boxeo</h2>
+        <p class="lead center">Junto a FH Boxing Team · lunes, miércoles y viernes</p>
+
+        <div class="slider" tabindex="0" aria-label="Niveles de boxeo">
+          <article class="class-card" id="nivel-1">
+            <div class="class-card__media">
+              <img src="assets/img/boxeo-sparring.jpg" alt="Alumnos practicando boxeo con manoplas en Gym Progress" loading="lazy" width="312" height="422">
+            </div>
+            <div class="class-card__body">
+              <p class="tag">20:00 a 21:00</p>
+              <h3>Boxeo formativo y recreativo</h3>
+              <p>Para partir de cero o entrenar por salud.</p>
+              <ul class="dots">
+                <li><b>Técnica base:</b> guardia, desplazamientos y golpes</li>
+                <li><b>Acondicionamiento</b> y coordinación</li>
+                <li>Trabajo en <b>saco y manoplas</b></li>
+                <li>Ambiente cercano, a tu ritmo</li>
+              </ul>
+              <a class="next" href="#nivel-2" aria-label="Ver nivel avanzado">→</a>
+            </div>
+          </article>
+
+          <article class="class-card" id="nivel-2">
+            <div class="class-card__media">
+              <img src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?auto=format&fit=crop&w=700&q=70"
+                   onerror="this.onerror=null;this.src='assets/img/cuerdas.jpg'"
+                   alt="Ring de boxeo con guantes colgando" loading="lazy" width="700" height="900">
+            </div>
+            <div class="class-card__body">
+              <p class="tag">21:00 a 22:00</p>
+              <h3>Boxeo avanzado y competitivo</h3>
+              <p>Para quienes ya dominan lo básico y quieren ir por más.</p>
+              <ul class="dots">
+                <li><b>Combinaciones</b> y defensa</li>
+                <li><b>Sparring</b> controlado</li>
+                <li>Preparación física para <b>competir</b></li>
+                <li>Seguimiento del equipo FH Boxing</li>
+              </ul>
+              <a class="next" href="#nivel-1" aria-label="Volver a nivel formativo">←</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Galería ===== -->
+    <section class="gallery container" aria-labelledby="gallery-title">
+      <div class="gallery__head">
+        <h2 id="gallery-title" class="h2">Así se ve<br>Gym Progress</h2>
+        <div class="gallery__aside">
+          <p>Fotos reales de nuestra sala en <b>Punta de Tralca</b>. Pasa a conocerla o mira más en Instagram.</p>
+          <a class="btn btn--sm" href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener">Ver Instagram <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </div>
+      <div class="gallery__grid">
+        <img src="assets/img/sala-bicis-mural.jpg" alt="Bicicletas de spinning frente a un mural en muro de ladrillo" loading="lazy" width="278" height="538">
+        <img src="assets/img/sala-racks.jpg" alt="Racks y máquinas rojas de la sala" loading="lazy" width="278" height="538">
+        <img src="assets/img/sala-prensa.jpg" alt="Prensa de piernas y discos" loading="lazy" width="278" height="538">
+        <img src="assets/img/sala-mancuernas.jpg" alt="Rack de mancuernas junto a la ventana" loading="lazy" width="278" height="538">
+        <img src="assets/img/cuerdas.jpg" alt="Alumno entrenando con cuerdas de batalla" loading="lazy" width="330" height="426">
+      </div>
+    </section>
+
+    <!-- ===== Planes ===== -->
+    <section class="plans container" id="planes" aria-labelledby="plans-title">
+      <h2 id="plans-title" class="h2 center">Elige cómo entrenar</h2>
+      <div class="plans__grid">
+        <article class="plan">
+          <span class="plan__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 6h4v4H6zM14 6h4v4h-4zM6 14h4v4H6zM14 14h4v4h-4z"/></svg></span>
+          <h3>Sala</h3>
+          <ul class="dots">
+            <li>Sala de máquinas</li>
+            <li>Peso libre y jaula</li>
+            <li>Cardio y spinning</li>
+            <li class="off">Clases de boxeo</li>
+          </ul>
+          <a class="btn btn--sm" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Consulta tu valor</a>
+        </article>
+
+        <article class="plan plan--featured">
+          <span class="plan__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></span>
+          <h3>Full Progress</h3>
+          <ul class="dots">
+            <li>Sala de máquinas</li>
+            <li>Peso libre y jaula</li>
+            <li>Cardio y spinning</li>
+            <li>Clases de boxeo</li>
+          </ul>
+          <a class="btn btn--light btn--sm" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Consulta tu valor</a>
+        </article>
+
+        <article class="plan">
+          <span class="plan__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h7a4 4 0 0 1 4 4v4a6 6 0 0 1-6 6H9a4 4 0 0 1-4-4V6a2 2 0 0 1 2-2zM5 18h11v3H5z"/></svg></span>
+          <h3>Boxeo</h3>
+          <ul class="dots">
+            <li>Clases grupales L-M-V</li>
+            <li>Nivel formativo o avanzado</li>
+            <li>Equipo FH Boxing Team</li>
+            <li class="off">Sala de máquinas</li>
+          </ul>
+          <a class="btn btn--sm" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Consulta tu valor</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas frecuentes ===== -->
+    <section class="faq container" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="h2">Lo que más<br>nos preguntan</h2>
+      <div class="faq__list">
+        <details>
+          <summary>¿Hay clases grupales?</summary>
+          <p>Sí. Boxeo grupal los lunes, miércoles y viernes: formativo y recreativo de 20:00 a 21:00, y avanzado y competitivo de 21:00 a 22:00.</p>
+        </details>
+        <details>
+          <summary>¿Cuáles son los valores y horarios?</summary>
+          <p>Escríbenos por Instagram y te respondemos con los valores vigentes y los horarios de la sala.</p>
+        </details>
+        <details>
+          <summary>¿Necesito experiencia para boxeo?</summary>
+          <p>No. El nivel formativo está pensado para empezar desde cero.</p>
+        </details>
+        <details>
+          <summary>¿Dónde están?</summary>
+          <p>En Isidoro Dubournais 2611, Punta de Tralca, El Quisco.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== Banner final ===== -->
+    <section class="cta container" id="contacto" aria-labelledby="cta-title">
+      <div class="cta__box">
+        <div class="cta__text">
+          <h2 id="cta-title">Si quieres ver progreso de verdad, este es tu lugar</h2>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Escríbenos <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Isidoro+Dubournais+2611,+El+Quisco" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+        <img class="cta__img" src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?auto=format&fit=crop&w=900&q=70"
+             onerror="this.onerror=null;this.src='assets/img/cuerdas.jpg'"
+             alt="Hombre haciendo flexiones en el gimnasio" loading="lazy" width="900" height="700">
+      </div>
+
+      <div class="map">
+        <iframe title="Mapa de Gym Progress en El Quisco"
+                src="https://maps.google.com/maps?q=Isidoro%20Dubournais%202611%2C%20El%20Quisco&z=15&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__grid container">
+      <div>
+        <a href="#inicio" class="brand" aria-label="Gym Progress">
+          <svg class="brand__badge" aria-hidden="true"><use href="#logo-gp"/></svg>
+          <span class="brand__name">GYM <b>PROGRESS</b></span>
+        </a>
+        <p class="footer__about">Gimnasio y boxeo en Punta de Tralca.<br>Isidoro Dubournais 2611, El Quisco.</p>
+      </div>
+      <nav aria-label="Menú del pie">
+        <h3>Menú</h3>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#zonas">Zonas</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#contacto">Ubicación</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>Entrena</h3>
+        <ul>
+          <li>Sala de máquinas</li>
+          <li>Peso libre</li>
+          <li>Cardio y spinning</li>
+          <li>Boxeo grupal</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li><a href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Mensaje directo</a></li>
+          <li><a href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener">@gym_progressssss</a></li>
+        </ul>
+        <div class="social">
+          <a href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener" aria-label="Instagram de Gym Progress">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>© <span>2026</span> Gym Progress</p>
+      <p>Sitio web por <a href="https://tuplandigital.cl" target="_blank" rel="noopener">Tu Plan Digital</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
