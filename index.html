@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto+Slab:wght@800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Montserrat:wght@500;600;700&family=Roboto+Slab:wght@800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
   <script type="application/ld+json">
@@ -81,7 +81,9 @@
         <li><a href="#planes">Planes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn--sm nav__cta" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Escríbenos</a>
+      <a class="nav__icon" href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener" aria-label="Instagram de Gym Progress">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg>
+      </a>
     </nav>
   </header>
 
@@ -89,8 +91,8 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero container" id="inicio">
-      <div class="hero__top">
-        <h1 class="hero__title">Tu progreso se entrena en <span>Punta de Tralca</span></h1>
+      <div class="hero__head">
+        <h1 class="hero__title">Tu progreso se entrena<br class="br-desk"> en Punta de Tralca</h1>
         <p class="hero__note">
           <span class="hero__bolt" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
@@ -101,17 +103,22 @@
 
       <div class="hero__card">
         <img class="hero__img"
-             src="https://images.unsplash.com/photo-1707538320664-1fca7c3c7770?auto=format&fit=crop&w=1600&q=75"
+             src="https://images.unsplash.com/photo-1608138279038-8dd61d909bd0?auto=format&fit=crop&w=1600&q=75"
              onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
-             alt="Hombre descansando entre series en un banco de gimnasio" width="1600" height="900" fetchpriority="high">
+             alt="Hombre con ropa deportiva negra descansando en un banco de gimnasio" width="1600" height="900" fetchpriority="high">
         <div class="hero__cta notch notch--bl">
           <a class="btn" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">
-            Quiero entrenar <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            Inscríbete <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
         </div>
         <div class="hero__chip">
-          <img src="assets/img/boxeo-sparring.jpg" alt="" width="56" height="56" loading="lazy">
-          <p><b>Boxeo grupal</b> con FH Boxing Team, lunes, miércoles y viernes</p>
+          <div class="hero__avatars" aria-hidden="true">
+            <img src="assets/img/boxeo-sparring.jpg" alt="" width="44" height="44" loading="lazy">
+            <img src="assets/img/cuerdas.jpg" alt="" width="44" height="44" loading="lazy">
+            <img src="assets/img/sala-racks.jpg" alt="" width="44" height="44" loading="lazy">
+            <img src="assets/img/sala-bicis-mural.jpg" alt="" width="44" height="44" loading="lazy">
+          </div>
+          <p>Boxeo grupal <b>con FH Boxing Team</b></p>
         </div>
       </div>
     </section>
@@ -181,25 +188,29 @@
             <img src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
                  alt="Sala de musculación con luz roja" loading="lazy" width="1400" height="600">
-            <figcaption>Poleas, prensa, máquinas guiadas y estaciones multifunción para trabajar cada grupo muscular.</figcaption>
+            <figcaption class="sr-only">Poleas, prensa, máquinas guiadas y estaciones multifunción para trabajar cada grupo muscular.</figcaption>
+            <div class="panel__nav"><label for="z4" aria-label="Zona anterior">&#8592;</label><label for="z2" aria-label="Zona siguiente">&#8594;</label></div>
           </figure>
           <figure class="panel" id="p2">
             <img src="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-mancuernas.jpg'"
                  alt="Mancuerna roja y plateada sobre superficie negra" loading="lazy" width="1400" height="600">
-            <figcaption>Racks de mancuernas, barras, discos y jaula para tus básicos: sentadilla, peso muerto y press.</figcaption>
+            <figcaption class="sr-only">Racks de mancuernas, barras, discos y jaula para tus básicos: sentadilla, peso muerto y press.</figcaption>
+            <div class="panel__nav"><label for="z1" aria-label="Zona anterior">&#8592;</label><label for="z3" aria-label="Zona siguiente">&#8594;</label></div>
           </figure>
           <figure class="panel" id="p3">
             <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-bicis-mural.jpg'"
                  alt="Bicicletas de spinning en fila" loading="lazy" width="1400" height="600">
-            <figcaption>Bicicletas de spinning, trotadora curva, remo y cuerdas para subir pulsaciones.</figcaption>
+            <figcaption class="sr-only">Bicicletas de spinning, trotadora curva, remo y cuerdas para subir pulsaciones.</figcaption>
+            <div class="panel__nav"><label for="z2" aria-label="Zona anterior">&#8592;</label><label for="z4" aria-label="Zona siguiente">&#8594;</label></div>
           </figure>
           <figure class="panel" id="p4">
             <img src="https://images.unsplash.com/photo-1716307035615-1c6465a32ef2?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/boxeo-sparring.jpg'"
                  alt="Fila de sacos de boxeo colgados" loading="lazy" width="1400" height="600">
-            <figcaption>Sacos, guantes y espacio para técnica, manoplas y sparring con FH Boxing Team.</figcaption>
+            <figcaption class="sr-only">Sacos, guantes y espacio para técnica, manoplas y sparring con FH Boxing Team.</figcaption>
+            <div class="panel__nav"><label for="z3" aria-label="Zona anterior">&#8592;</label><label for="z1" aria-label="Zona siguiente">&#8594;</label></div>
           </figure>
         </div>
       </div>
@@ -250,6 +261,10 @@
             </div>
           </article>
         </div>
+        <div class="pager" aria-label="Niveles">
+          <a href="#nivel-1" aria-label="Nivel formativo"></a>
+          <a href="#nivel-2" aria-label="Nivel avanzado"></a>
+        </div>
       </div>
     </section>
 
@@ -258,6 +273,7 @@
       <div class="gallery__head">
         <h2 id="gallery-title" class="h2">Así se ve<br>Gym Progress</h2>
         <div class="gallery__aside">
+          <span class="gallery__cube" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9zM4 7.5 12 12l8-4.5M12 12v9"/></svg></span>
           <p>Fotos reales de nuestra sala en <b>Punta de Tralca</b>. Pasa a conocerla o mira más en Instagram.</p>
           <a class="btn btn--sm" href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener">Ver Instagram <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
