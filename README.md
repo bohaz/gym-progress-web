@@ -36,6 +36,22 @@ Hero · Por qué entrenar · Zonas (pestañas) · Clases de boxeo · Galería ·
 - Libres de [Unsplash](https://unsplash.com/license), enlazadas desde `images.unsplash.com`: Eser GOAT, Truflava Productions, Ambitious Studio (Rick Barrett), Roman Aguila, David Marioni, Mohamed Fareed, Nathan Dumlao, Temple Noble Art y Alonso Reyes. Cada una tiene una foto local del gimnasio como respaldo si no carga.
 - Resto: publicaciones de @gym_progressssss.
 
+## Opción 2 · `/opcion-2/`
+
+Segunda propuesta, réplica de la referencia «Flexova Fitness Gym» (Dribbble) con el contenido real de Gym Progress. Convive con la opción 1 en el mismo deploy: `https://gym-progress-web-xi.vercel.app/opcion-2/`.
+
+- Proporciones medidas sobre la referencia a 1440 px: contenedor de 1052 px, titular del hero de 66 px y títulos de sección de 44 px.
+- Tipografías autoalojadas en `opcion-2/fonts/` (Archivo variable a 108 % de ancho para títulos y Manrope para textos, licencia OFL), sin llamadas a Google Fonts.
+- Secciones: Hero · Nosotros y cifras · Zonas (carrusel) · Boxeo con FH Boxing Team (slider) · Planes · Cómo empezar (línea de tiempo) · Comentarios · Preguntas frecuentes · Contacto · Banner · Footer.
+- Animaciones en CSS (entrada del hero, destellos de luz, apariciones al hacer scroll, menú a pantalla completa, acordeón). `opcion-2/js/main.js` solo agrega clases: cifras con contador, barra de progreso y arrastre de los carruseles, avance automático del slider de boxeo, línea de tiempo y formulario. Respeta `prefers-reduced-motion`.
+- El formulario no tiene backend: arma el mensaje, lo copia al portapapeles y abre el DM de Instagram.
+
+### Pendiente de confirmar con el cliente (opción 2)
+
+- Los comentarios son **de ejemplo** (así están rotulados); reemplazarlos por reseñas reales de Google Maps o Instagram.
+- Valores de los planes (hoy «Consulta / valor mensual») y horario de la sala.
+- Foto real del equipo FH Boxing Team para la tarjeta del nivel avanzado.
+
 ## Desarrollo local
 
 ```bash
