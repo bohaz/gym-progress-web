@@ -70,10 +70,9 @@
         <span class="brand__name">GYM <b>PROGRESS</b></span>
       </a>
 
-      <input type="checkbox" id="menu-toggle" class="nav__toggle" aria-label="Abrir menú">
-      <label for="menu-toggle" class="nav__burger" aria-hidden="true"><span></span></label>
+      <button type="button" class="nav__burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span></button>
 
-      <ul class="nav__links">
+      <ul class="nav__links" id="menu">
         <li><a href="#inicio" aria-current="page">Inicio</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#zonas">Zonas</a></li>
@@ -81,9 +80,7 @@
         <li><a href="#planes">Planes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <a class="nav__icon" href="https://www.instagram.com/gym_progressssss/" target="_blank" rel="noopener" aria-label="Instagram de Gym Progress">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" class="fill"/></svg>
-      </a>
+      <a class="btn btn--sm nav__cta" href="https://ig.me/m/gym_progressssss" target="_blank" rel="noopener">Contáctanos</a>
     </nav>
   </header>
 
@@ -170,48 +167,42 @@
         </ul>
       </div>
 
-      <div class="tabs">
-        <input type="radio" name="zona" id="z1" checked>
-        <input type="radio" name="zona" id="z2">
-        <input type="radio" name="zona" id="z3">
-        <input type="radio" name="zona" id="z4">
-
-        <div class="tabs__bar" role="presentation">
-          <label for="z1">Sala de máquinas</label>
-          <label for="z2">Peso libre</label>
-          <label for="z3">Cardio y spinning</label>
-          <label for="z4">Boxeo</label>
+      <div class="carousel" data-carousel>
+        <div class="tabs__bar" role="tablist" aria-label="Zonas del gimnasio">
+          <button type="button" class="tab" role="tab" data-go="0" aria-selected="true" aria-controls="zona-1">Sala de máquinas</button>
+          <button type="button" class="tab" role="tab" data-go="1" aria-selected="false" aria-controls="zona-2">Peso libre</button>
+          <button type="button" class="tab" role="tab" data-go="2" aria-selected="false" aria-controls="zona-3">Cardio y spinning</button>
+          <button type="button" class="tab" role="tab" data-go="3" aria-selected="false" aria-controls="zona-4">Boxeo</button>
         </div>
-
-        <div class="tabs__panels">
-          <figure class="panel" id="p1">
+        <div class="carousel__track zones__track" data-track tabindex="0" aria-label="Fotos de las zonas">
+          <figure class="slide" id="zona-1" role="tabpanel" aria-label="Sala de máquinas">
             <img src="https://images.unsplash.com/photo-1637430308606-86576d8fef3c?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-racks.jpg'"
                  alt="Sala de musculación con luz roja" loading="lazy" width="1400" height="600">
-            <figcaption class="sr-only">Poleas, prensa, máquinas guiadas y estaciones multifunción para trabajar cada grupo muscular.</figcaption>
-            <div class="panel__nav"><label for="z4" aria-label="Zona anterior">&#8592;</label><label for="z2" aria-label="Zona siguiente">&#8594;</label></div>
+            <figcaption>Poleas, prensa, máquinas guiadas y estaciones multifunción para trabajar cada grupo muscular.</figcaption>
           </figure>
-          <figure class="panel" id="p2">
+          <figure class="slide" id="zona-2" role="tabpanel" aria-label="Peso libre">
             <img src="https://images.unsplash.com/photo-1589579234096-25cb6b83e021?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-mancuernas.jpg'"
                  alt="Mancuerna roja y plateada sobre superficie negra" loading="lazy" width="1400" height="600">
-            <figcaption class="sr-only">Racks de mancuernas, barras, discos y jaula para tus básicos: sentadilla, peso muerto y press.</figcaption>
-            <div class="panel__nav"><label for="z1" aria-label="Zona anterior">&#8592;</label><label for="z3" aria-label="Zona siguiente">&#8594;</label></div>
+            <figcaption>Racks de mancuernas, barras, discos y jaula para tus básicos: sentadilla, peso muerto y press.</figcaption>
           </figure>
-          <figure class="panel" id="p3">
+          <figure class="slide" id="zona-3" role="tabpanel" aria-label="Cardio y spinning">
             <img src="https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/sala-bicis-mural.jpg'"
                  alt="Bicicletas de spinning en fila" loading="lazy" width="1400" height="600">
-            <figcaption class="sr-only">Bicicletas de spinning, trotadora curva, remo y cuerdas para subir pulsaciones.</figcaption>
-            <div class="panel__nav"><label for="z2" aria-label="Zona anterior">&#8592;</label><label for="z4" aria-label="Zona siguiente">&#8594;</label></div>
+            <figcaption>Bicicletas de spinning, trotadora curva, remo y cuerdas para subir pulsaciones.</figcaption>
           </figure>
-          <figure class="panel" id="p4">
+          <figure class="slide" id="zona-4" role="tabpanel" aria-label="Boxeo">
             <img src="https://images.unsplash.com/photo-1716307035615-1c6465a32ef2?auto=format&fit=crop&w=1400&q=70"
                  onerror="this.onerror=null;this.src='assets/img/boxeo-sparring.jpg'"
                  alt="Fila de sacos de boxeo colgados" loading="lazy" width="1400" height="600">
-            <figcaption class="sr-only">Sacos, guantes y espacio para técnica, manoplas y sparring con FH Boxing Team.</figcaption>
-            <div class="panel__nav"><label for="z3" aria-label="Zona anterior">&#8592;</label><label for="z1" aria-label="Zona siguiente">&#8594;</label></div>
+            <figcaption>Sacos, guantes y espacio para técnica, manoplas y sparring con FH Boxing Team.</figcaption>
           </figure>
+        </div>
+        <div class="carousel__nav">
+          <button type="button" class="arrow-btn" data-prev aria-label="Zona anterior"><svg viewBox="0 0 32 16" aria-hidden="true"><path d="M31 8H2M8 2 2 8l6 6"/></svg></button>
+          <button type="button" class="arrow-btn" data-next aria-label="Zona siguiente"><svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h29M24 2l6 6-6 6"/></svg></button>
         </div>
       </div>
     </section>
@@ -222,7 +213,8 @@
         <h2 id="boxing-title" class="h2 center">Clases grupales de boxeo</h2>
         <p class="lead center">Junto a FH Boxing Team · lunes, miércoles y viernes</p>
 
-        <div class="slider" tabindex="0" aria-label="Niveles de boxeo">
+        <div class="carousel" data-carousel>
+        <div class="slider carousel__track" data-track tabindex="0" aria-label="Niveles de boxeo">
           <article class="class-card" id="nivel-1">
             <div class="class-card__media">
               <img src="assets/img/boxeo-sparring.jpg" alt="Alumnos practicando boxeo con manoplas en Gym Progress" loading="lazy" width="312" height="422">
@@ -237,7 +229,10 @@
                 <li>Trabajo en <b>saco y manoplas</b></li>
                 <li>Ambiente cercano, a tu ritmo</li>
               </ul>
-              <a class="next" href="#nivel-2" aria-label="Ver nivel avanzado">→</a>
+              <div class="class-card__ctrl">
+                <button type="button" class="circle-btn" data-prev aria-label="Nivel anterior">&#8592;</button>
+                <button type="button" class="circle-btn" data-next aria-label="Nivel siguiente">&#8594;</button>
+              </div>
             </div>
           </article>
 
@@ -257,13 +252,17 @@
                 <li>Preparación física para <b>competir</b></li>
                 <li>Seguimiento del equipo FH Boxing</li>
               </ul>
-              <a class="next" href="#nivel-1" aria-label="Volver a nivel formativo">←</a>
+              <div class="class-card__ctrl">
+                <button type="button" class="circle-btn" data-prev aria-label="Nivel anterior">&#8592;</button>
+                <button type="button" class="circle-btn" data-next aria-label="Nivel siguiente">&#8594;</button>
+              </div>
             </div>
           </article>
         </div>
-        <div class="pager" aria-label="Niveles">
-          <a href="#nivel-1" aria-label="Nivel formativo"></a>
-          <a href="#nivel-2" aria-label="Nivel avanzado"></a>
+        <div class="pager" role="tablist" aria-label="Niveles">
+          <button type="button" role="tab" data-go="0" aria-selected="true" aria-label="Boxeo formativo y recreativo"></button>
+          <button type="button" role="tab" data-go="1" aria-selected="false" aria-label="Boxeo avanzado y competitivo"></button>
+        </div>
         </div>
       </div>
     </section>
@@ -422,5 +421,6 @@
     </div>
   </footer>
 
+  <script src="js/main.js" defer></script>
 </body>
 </html>

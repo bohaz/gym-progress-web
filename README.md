@@ -7,7 +7,7 @@ Diseño basado en la estructura de la referencia «RevitalizeX Fitness Club» (D
 ## Stack
 
 - HTML y CSS, sin build ni dependencias.
-- Interacciones solo con CSS: menú móvil (checkbox), pestañas de zonas (radio), carrusel de boxeo y galería (scroll-snap), preguntas frecuentes (`details`).
+- CSS para estilos y animaciones; `js/main.js` (sin dependencias) para el menú móvil, el enlace activo según la sección visible y los carruseles de zonas y boxeo (scroll-snap, flechas, pestañas, puntos, teclado y gesto táctil). Sin JavaScript, los carruseles siguen funcionando con scroll horizontal.
 - Fuentes: Montserrat, Inter y Roboto Slab (Google Fonts).
 
 ## Estructura
@@ -15,6 +15,7 @@ Diseño basado en la estructura de la referencia «RevitalizeX Fitness Club» (D
 ```
 index.html
 css/styles.css
+js/main.js
 assets/img/   fotos reales del gimnasio (recortes de sus publicaciones), favicon y og
 ```
 
