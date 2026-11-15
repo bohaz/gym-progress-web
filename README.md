@@ -33,7 +33,7 @@ Hero · Por qué entrenar · Zonas (pestañas) · Clases de boxeo · Galería ·
 
 ## Imágenes
 
-- Libres de [Unsplash](https://unsplash.com/license), enlazadas desde `images.unsplash.com`: Truflava Productions, Ambitious Studio (Rick Barrett), Roman Aguila, David Marioni, Mohamed Fareed, Nathan Dumlao, Temple Noble Art y Alonso Reyes. Cada una tiene una foto local del gimnasio como respaldo si no carga.
+- Libres de [Unsplash](https://unsplash.com/license), enlazadas desde `images.unsplash.com`: Eser GOAT, Truflava Productions, Ambitious Studio (Rick Barrett), Roman Aguila, David Marioni, Mohamed Fareed, Nathan Dumlao, Temple Noble Art y Alonso Reyes. Cada una tiene una foto local del gimnasio como respaldo si no carga.
 - Resto: publicaciones de @gym_progressssss.
 
 ## Desarrollo local
