@@ -21,12 +21,14 @@
   /* ---------- Encabezado: fondo al bajar, se oculta al bajar y vuelve al subir ---------- */
   const nav = $('[data-nav]');
   const heroImg = $('.hero__img');
+  const waFloat = $('[data-wa-float]');
   let lastY = window.scrollY;
   let ticking = false;
 
   const onScroll = () => {
     const y = window.scrollY;
     nav.classList.toggle('is-scrolled', y > 40);
+    waFloat?.classList.toggle('is-visible', y > window.innerHeight * 0.6);
     const goingDown = y > lastY && y > 420;
     if (!document.body.classList.contains('menu-open')) nav.classList.toggle('is-hidden', goingDown);
     lastY = y;
@@ -54,19 +56,33 @@
     sectionMap.forEach((_, id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
   }
 
-  /* ---------- Menú a pantalla completa ---------- */
+  /* ---------- Menú a pantalla completa (mobile) ---------- */
   const menu = $('[data-menu]');
   const openBtn = $('[data-menu-open]');
   const closeBtn = $('[data-menu-close]');
+  let menuTimer = null;
+
+  // El barrido nace y vuelve exactamente al botón hamburguesa
+  const setOrigin = () => {
+    const r = openBtn.getBoundingClientRect();
+    menu.style.setProperty('--ox', `${r.left + r.width / 2}px`);
+    menu.style.setProperty('--oy', `${r.top + r.height / 2}px`);
+  };
 
   const setMenu = (open) => {
+    if (open === menu.classList.contains('is-open')) return;
+    clearTimeout(menuTimer);
+    nav.classList.remove('is-hidden');
     if (open) {
+      setOrigin();
       menu.hidden = false;
-      requestAnimationFrame(() => menu.classList.add('is-open'));
+      // Doble rAF: asegura que el estado inicial se pinte antes del barrido
+      requestAnimationFrame(() => requestAnimationFrame(() => menu.classList.add('is-open')));
       closeBtn.focus({ preventScroll: true });
     } else {
       menu.classList.remove('is-open');
-      menu.hidden = true;
+      // Se oculta al terminar el barrido de cierre, no antes
+      menuTimer = setTimeout(() => { menu.hidden = true; }, reduceMotion ? 0 : 650);
       openBtn.focus({ preventScroll: true });
     }
     document.body.classList.toggle('menu-open', open);
@@ -76,8 +92,10 @@
   closeBtn.addEventListener('click', () => setMenu(false));
   $$('a', menu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenu(false);
+    if (e.key === 'Escape') setMenu(false);
   });
+  // Si se agranda la ventana a desktop con el menú abierto, se cierra
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
   /* ---------- Aparición al hacer scroll (con escalonado por grupo) ---------- */
   const reveals = $$('[data-reveal]');
@@ -261,7 +279,7 @@
   }
   updateTimeline();
 
-  /* ---------- Formulario: arma el mensaje y abre el DM de Instagram ---------- */
+  /* ---------- Formulario: arma el mensaje y abre WhatsApp ---------- */
   const form = $('[data-form]');
   const status = $('[data-form-status]');
   form?.addEventListener('submit', async (e) => {
@@ -282,17 +300,14 @@
     const correo = String(data.get('correo') || '').trim();
     const msg = String(data.get('mensaje') || '').trim();
     const text = [
-      `Hola, soy ${nombre}. Me interesa: ${interes}.`,
+      `Hola Gym Progress 👋 Soy ${nombre}. Me interesa: ${interes}.`,
       msg,
       tel && `Mi teléfono: +56 ${tel}`,
       correo && `Mi correo: ${correo}`,
     ].filter(Boolean).join('\n');
 
-    let copied = false;
-    try { await navigator.clipboard.writeText(text); copied = true; } catch { /* sin permiso */ }
-    status.textContent = copied
-      ? 'Listo: copiamos tu mensaje. Pégalo en el chat de Instagram que se abrió.'
-      : 'Se abrió Instagram: cuéntanos tu nombre y qué plan te interesa.';
-    window.open('https://ig.me/m/gym_progressssss', '_blank', 'noopener');
+    const number = (form.dataset.wa || '').replace(/\D/g, '');
+    status.textContent = 'Abriendo WhatsApp con tu mensaje…';
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
 })();

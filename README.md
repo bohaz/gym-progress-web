@@ -25,7 +25,7 @@ Hero · Por qué entrenar · Zonas (pestañas) · Clases de boxeo · Galería ·
 
 ## Pendiente de confirmar con el cliente
 
-- Contacto: los botones abren el DM de `@gym_progressssss`. Si tienen WhatsApp, cambiar los enlaces `ig.me`.
+- Contacto: los botones abren el DM de `@gym_progresssssss`. Si tienen WhatsApp, cambiar los enlaces `ig.me`.
 - Valores y horarios de la sala (hoy: «Consulta tu valor»).
 - Nombres y contenido real de los planes.
 - Reseñas de Google Maps, si existen.
@@ -34,7 +34,7 @@ Hero · Por qué entrenar · Zonas (pestañas) · Clases de boxeo · Galería ·
 ## Imágenes
 
 - Libres de [Unsplash](https://unsplash.com/license), enlazadas desde `images.unsplash.com`: Eser GOAT, Truflava Productions, Ambitious Studio (Rick Barrett), Roman Aguila, David Marioni, Mohamed Fareed, Nathan Dumlao, Temple Noble Art y Alonso Reyes. Cada una tiene una foto local del gimnasio como respaldo si no carga.
-- Resto: publicaciones de @gym_progressssss.
+- Resto: publicaciones de @gym_progresssssss.
 
 ## Opción 2 · `/opcion-2/`
 
@@ -44,11 +44,13 @@ Segunda propuesta, réplica de la referencia «Flexova Fitness Gym» (Dribbble) 
 - Tipografías autoalojadas en `opcion-2/fonts/` (Archivo variable a 108 % de ancho para títulos y Manrope para textos, licencia OFL), sin llamadas a Google Fonts.
 - Secciones: Hero · Nosotros y cifras · Zonas (carrusel) · Boxeo con FH Boxing Team (slider) · Planes · Cómo empezar (línea de tiempo) · Comentarios · Preguntas frecuentes · Contacto · Banner · Footer.
 - Animaciones en CSS (entrada del hero, destellos de luz, apariciones al hacer scroll, menú a pantalla completa, acordeón). `opcion-2/js/main.js` solo agrega clases: cifras con contador, barra de progreso y arrastre de los carruseles, avance automático del slider de boxeo, línea de tiempo y formulario. Respeta `prefers-reduced-motion`.
-- El formulario no tiene backend: arma el mensaje, lo copia al portapapeles y abre el DM de Instagram.
+- Contacto por WhatsApp: todos los botones abren un chat con el mensaje prellenado según el plan o la clase, y hay un botón flotante. El formulario no tiene backend: arma el mensaje con los datos y abre WhatsApp. Instagram queda para seguir la cuenta.
+- Menú hamburguesa solo en mobile; en desktop se usan los enlaces del navbar.
 
 ### Pendiente de confirmar con el cliente (opción 2)
 
 - Los comentarios son **de ejemplo** (así están rotulados); reemplazarlos por reseñas reales de Google Maps o Instagram.
+- **Número de WhatsApp**: hoy es de muestra (`56900000000`). Reemplazarlo en `opcion-2/index.html` (enlaces `wa.me` y `data-wa` del formulario) por el real, que está en el enlace wa.me de la bio de Instagram.
 - Valores de los planes (hoy «Consulta / valor mensual») y horario de la sala.
 - Foto real del equipo FH Boxing Team para la tarjeta del nivel avanzado.
 
